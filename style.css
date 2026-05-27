@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #06324f; font-family: Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif; color: white; }
+#gameWrap { position: fixed; inset: 0; display: grid; place-items: center; background: radial-gradient(circle at 50% 20%, #1b9fe0 0%, #06324f 58%, #021726 100%); }
+canvas { width: min(100vw, 56.25vh); height: min(177.78vw, 100vh); max-width: 100vw; max-height: 100vh; display: block; touch-action: none; border-radius: 18px; box-shadow: 0 20px 80px rgba(0,0,0,.35); }
+.panel.top { position: absolute; top: max(10px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); width: min(94vw, 510px); display: flex; justify-content: space-between; gap: 8px; padding: 10px 12px; background: rgba(0,0,0,.28); border: 1px solid rgba(255,255,255,.2); border-radius: 16px; backdrop-filter: blur(10px); font-size: 14px; z-index: 2; }
+.overlay { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(1, 20, 36, .42); backdrop-filter: blur(5px); z-index: 5; padding: 18px; }
+.hidden { display: none !important; }
+.card { width: min(92vw, 430px); background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08)); border: 1px solid rgba(255,255,255,.3); box-shadow: 0 25px 80px rgba(0,0,0,.35); border-radius: 28px; padding: 24px; text-align: center; }
+.logo { font-size: 58px; filter: drop-shadow(0 8px 18px rgba(0,0,0,.3)); }
+h1 { margin: 8px 0 6px; font-size: 38px; line-height: 1; }
+h2 { margin-top: 0; }
+.subtitle { opacity: .92; line-height: 1.45; }
+.hint { opacity: .72; font-size: 13px; margin-bottom: 0; }
+button { width: 100%; border: 0; border-radius: 16px; padding: 14px 16px; margin: 7px 0; font-weight: 800; color: #08324f; background: #fff; cursor: pointer; font-size: 16px; box-shadow: 0 8px 0 rgba(0,0,0,.14); }
+button:active { transform: translateY(3px); box-shadow: 0 5px 0 rgba(0,0,0,.14); }
+button.primary { color: #fff; background: linear-gradient(90deg, #ff9d1e, #ff4d8d); }
+.skins { display: grid; gap: 10px; margin: 14px 0; }
+.skin { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px; border-radius: 16px; background: rgba(255,255,255,.12); }
+.skin span { text-align: left; }
+.skin button { width: auto; min-width: 116px; margin: 0; padding: 10px; font-size: 13px; }
+.toast { position: absolute; bottom: max(20px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); width: min(92vw, 420px); padding: 12px 16px; text-align: center; border-radius: 16px; background: rgba(0,0,0,.72); z-index: 10; }

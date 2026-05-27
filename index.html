@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0b77bd" />
+  <title>Surf Dog Rush — MVP</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Yandex Games SDK. В обычном браузере игра работает и без него. -->
+  <script src="https://yandex.ru/games/sdk/v2"></script>
+</head>
+<body>
+  <div id="gameWrap">
+    <canvas id="game" width="900" height="1600" aria-label="Surf Dog Rush game canvas"></canvas>
+
+    <div id="hud" class="panel top">
+      <div>Очки: <b id="score">0</b></div>
+      <div>Монеты: <b id="coins">0</b></div>
+      <div>Рекорд: <b id="best">0</b></div>
+    </div>
+
+    <section id="menu" class="overlay">
+      <div class="card">
+        <div class="logo">🐶🏄‍♂️</div>
+        <h1>Surf Dog Rush</h1>
+        <p class="subtitle">Мемный щенок серфит по тропическим волнам. Собирай косточки, уворачивайся от крабов и ставь рекорды.</p>
+        <button id="playBtn" class="primary">Играть</button>
+        <button id="shopBtn">Магазин скинов</button>
+        <button id="leaderBtn">Лидерборд</button>
+        <p class="hint">Управление: свайп / ← → / ↑ / ↓</p>
+      </div>
+    </section>
+
+    <section id="gameOver" class="overlay hidden">
+      <div class="card">
+        <h2>Заплыв окончен!</h2>
+        <p>Очки: <b id="finalScore">0</b></p>
+        <p>Собрано монет: <b id="finalCoins">0</b></p>
+        <button id="reviveBtn" class="primary">Продолжить за рекламу</button>
+        <button id="doubleBtn">Удвоить монеты за рекламу</button>
+        <button id="restartBtn">Заново</button>
+        <button id="homeBtn">В меню</button>
+      </div>
+    </section>
+
+    <section id="shop" class="overlay hidden">
+      <div class="card">
+        <h2>Магазин</h2>
+        <p>Баланс: <b id="bankCoins">0</b> монет</p>
+        <div class="skins" id="skins"></div>
+        <button id="backFromShop">Назад</button>
+      </div>
+    </section>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
